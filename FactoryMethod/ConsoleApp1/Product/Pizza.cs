@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Text;
 
-namespace FactoryMethod
+namespace FactoryMethod.Product
 {
+    //Product
     public abstract class Pizza
     {
         protected string Name { get; set; }
@@ -32,19 +33,19 @@ namespace FactoryMethod
             return sb.ToString();
         }
 
-        private string Pack()
+        public virtual string Pack()
         {
-            return "Packing the pizza for the trip";
+            return "Packing the pizza for the trip \n";
         }
 
-        private string Slice()
+        public virtual string Slice()
         {
-            return "Slicing the pizza into 8 pieces";
+            return "Slicing the pizza into 8 pieces \n";
         }
 
         public virtual string Cook()
         {
-            return "Cooking for 25 minutes and 350 degrees";
+            return "Cooking for 25 minutes and 350 degrees \n";
         }
     }
 }
